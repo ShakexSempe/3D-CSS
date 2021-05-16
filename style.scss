@@ -46,6 +46,8 @@ body {
         skyblue,
         #000
     );
+    animation: sceneRotate var(--rotate-speed) infinite linear reverse;
+
 }
 
 .ball-shadow {

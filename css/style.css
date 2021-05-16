@@ -34,7 +34,8 @@ body {
   position: absolute;
   left: -.5em;
   bottom: 1em;
-  background-image: radial-gradient(circle at top, skyblue, #000); }
+  background-image: radial-gradient(circle at top, skyblue, #000);
+  animation: sceneRotate var(--rotate-speed) infinite linear reverse; }
 
 .ball-shadow {
   position: absolute;

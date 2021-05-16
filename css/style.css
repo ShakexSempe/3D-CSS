@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 :root {
-  --boxColor: #0ff7; }
+  --boxColor: #0ff7;
+  --rotate-speed: 30s; }
 
 body {
   background-color: #000;
@@ -18,7 +19,12 @@ body {
 
 .scene {
   position: relative;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  animation: sceneRotate var(--rotate-speed) infinite linear; }
+
+@keyframes sceneRotate {
+  to {
+    transform: rotateY(360deg); } }
 
 .ball {
   width: 1em;
@@ -39,6 +45,7 @@ body {
 .cube {
   width: 2em;
   height: 2em;
+  transform: preserve-3d;
   position: absolute;
   top: -1em;
   left: -1em; }

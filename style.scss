@@ -54,10 +54,10 @@ body {
 
         @keyframes ballBounce {
             0%, 100% {
-                bottom: 1em;
+                bottom: .5em;
             }
             50% {
-                bottom: 3em;
+                bottom: 2.5em;
                 animation-timing-function: ease-in;
             }
         }
@@ -88,8 +88,19 @@ body {
     height: 2em;
     transform: preserve-3d;
     position: absolute;
-    top: -1em;
+    bottom: -1em;
     left: -1em;
+    animation: 
+        cubeHeight var(--bounce-speed) infinite linear;
+
+        @keyframes cubeHeight {
+            0%, 100% {
+                height: 1.5em;
+            }
+            20%, 80% {
+                height: 2em;
+            }
+        }
     
     .front, .back, .left, .right {
         position: absolute;

@@ -71,7 +71,7 @@ body {
     animation: shadowBounce var(--bounce-speed) infinite ease-out;
 
     @keyframes shadowBounce {
-        0%, 100% {
+        0%, 8%, 93%, 100% {
             transform: scale(1);
             opacity: 1;
         }

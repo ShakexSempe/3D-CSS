@@ -36,8 +36,10 @@ body {
   position: absolute;
   left: -.5em;
   bottom: 1em;
-  background-image: radial-gradient(circle at top, skyblue, #000);
-  animation: ballBounce var(--bounce-speed) infinite ease-out, sceneRotate var(--rotate-speed) infinite linear reverse; }
+  background-image: url("../earth7.jpg");
+  background-size: 200%;
+  background-position: 10%;
+  animation: earthRotate var(--rotate-speed) infinite linear, ballBounce var(--bounce-speed) infinite ease-out, sceneRotate var(--rotate-speed) infinite linear reverse; }
 
 @keyframes ballBounce {
   0%, 100% {
@@ -45,6 +47,10 @@ body {
   50% {
     bottom: 2.5em;
     animation-timing-function: ease-in; } }
+
+@keyframes earthRotate {
+  100% {
+    background-position: 210%; } }
 
 .ball-shadow {
   position: absolute;
@@ -59,8 +65,7 @@ body {
     opacity: 1; }
   50% {
     transform: scale(1.4);
-    animation-timing-function: ease-in;
-    opacity: .7; } }
+    animation-timing-function: ease-in; } }
 
 .cube {
   width: 2em;
